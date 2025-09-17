@@ -13,10 +13,10 @@ match priority:
         message = f"Note: '{task}' is a low priority task"
     case _:
         message = f"'{task}' has an unknown priority level"
-
 # Adjust message if task is time-bound
 if time_bound == "yes":
-    message += " that requires immediate attention today!"
-
+    message += " that requires immediate attention today!" 
+else:
+    message +=".Consider completing it when you have free time."
 # Provide customized reminder
-print(message)
+print(f"Reminder:{message}")
